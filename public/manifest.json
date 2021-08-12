@@ -1,0 +1,10 @@
+{
+  "short_name": "KDA<->ETH",
+  "name": "KDA<->ETH Bridge",
+  "description": "Attest to transfers from KDA to ETH",
+  "iconPath": "logo.png",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

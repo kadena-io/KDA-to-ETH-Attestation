@@ -1,0 +1,86 @@
+{
+  "name": "safe-airdrop",
+  "version": "1.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --watchAll=false --verbose",
+    "lint": "eslint --max-warnings 0 .",
+    "coverage": "yarn test --coverage",
+    "eject": "react-scripts eject",
+    "fmt": "prettier --check '**/*.ts'",
+    "fmt:write": "prettier --write '**/*.ts'",
+    "prepare": "husky install",
+    "generate-types": "typechain --target=ethers-v5 --out-dir src/contracts './node_modules/@openzeppelin/contracts/build/contracts/ERC20.json'",
+    "postinstall": "yarn generate-types"
+  },
+  "dependencies": {
+    "@fast-csv/parse": "^4.3.6",
+    "@gnosis.pm/safe-apps-provider": "^0.6.0",
+    "@gnosis.pm/safe-apps-react-sdk": "^4.0.0",
+    "@gnosis.pm/safe-apps-sdk": "^4.0.0",
+    "@gnosis.pm/safe-react-components": "^0.7.0",
+    "@material-ui/core": "^4.12.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "@openzeppelin/contracts": "^4.2.0",
+    "ace-builds": "^1.4.12",
+    "bignumber.js": "^9.0.1",
+    "ethers": "^5.4.2",
+    "honeyswap-default-token-list": "^3.1.1",
+    "lodash.debounce": "^4.0.8",
+    "react": "^17.0.2",
+    "react-ace": "^9.4.1",
+    "react-app-rewired": "^2.1.6",
+    "react-csv-reader": "^3.3.1",
+    "react-dom": "^17.0.2",
+    "react-dropzone": "^11.3.4",
+    "react-scripts": "^4.0.3",
+    "react-svg": "^14.0.6",
+    "styled-components": "^5.1.1",
+    "typescript": "~4.3.5"
+  },
+  "devDependencies": {
+    "@simbathesailor/use-what-changed": "^2.0.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@typechain/ethers-v5": "^7.0.1",
+    "@types/chai": "^4.2.21",
+    "@types/chai-as-promised": "^7.1.4",
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/node": "^14.17.6",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "@types/styled-components": "^5.1.11",
+    "babel-eslint": "^10.1.0",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.8.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.1",
+    "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1",
+    "typechain": "^5.1.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "./",
+  "resolutions": {
+    "**/@typescript-eslint/eslint-plugin": "^4.1.1",
+    "**/@typescript-eslint/parser": "^4.1.1"
+  }
+}
